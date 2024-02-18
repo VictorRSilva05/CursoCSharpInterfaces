@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp18.Services
 {
-    internal class BrazilTaxService
+    internal class BrazilTaxService : ITaxService
     {
         public double Tax(double amount)
         {
