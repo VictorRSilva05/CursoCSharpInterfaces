@@ -13,5 +13,11 @@ namespace ConsoleApp18.Entities
         public Vehicle Vehicle { get; set; }
         public Invoice Invoice { get; set; }
 
+        public Rental(DateTime start, DateTime finish, Vehicle vehicle)
+        {
+            Start = start;
+            Finish = finish;
+            Vehicle = vehicle;
+        }
     }
 }
