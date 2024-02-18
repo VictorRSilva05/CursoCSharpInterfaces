@@ -8,43 +8,10 @@ namespace ConsoleApp18.Entities
 {
     internal class Rental
     {
-        public string CarModel { get; set; }
-        public DateTime PickupDate { get; set; }
-        public DateTime ReturnDate { get; set; }
-        public double PerHour { get; set; }
-        public double PerDay { get; set; }
+        public DateTime Start { get; set; }
+        public DateTime Finish { get; set; }
+        public Vehicle Vehicle { get; set; }
+        public Invoice Invoice { get; set; }
 
-        public double Tax { get; set; }
-
-        public Rental() { }
-
-        public Rental(string carModel, DateTime pickupDate, DateTime returnDate, double perHour, double perDay)
-        {
-            CarModel = carModel;
-            PickupDate = pickupDate;
-            ReturnDate = returnDate;
-            PerHour = perHour;
-            PerDay = perDay;
-        }
-
-        public double RentalPrice(double perHour, int hours)
-        {
-            double total = default;
-            total = perHour * hours;
-            Tax = total < 100 ? total * 0.2 : total * 0.15;
-            return total;
-        }
-
-        public double RentalPrice(double perDay, int days, int hours)
-        {
-            if (hours != null)
-            {
-                days++;
-            }
-            double total = default;
-            total = perDay * days;
-            Tax = total * 0.15;
-            return total;
-        }
     }
 }
