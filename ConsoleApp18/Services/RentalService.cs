@@ -7,13 +7,13 @@ using ConsoleApp18.Entities;
 
 namespace ConsoleApp18.Services
 {
-    internal class RentalSerice
+    internal class RentalService
     {
         public double PricePerHour { get; private set; }
         public double PricePerDay { get; private set; }
 
         private BrazilTaxService _brazilTaxService = new BrazilTaxService();
-        public RentalSerice(double pricePerHour, double pricePerDay)
+        public RentalService(double pricePerHour, double pricePerDay)
         {
             PricePerHour = pricePerHour;
             PricePerDay = pricePerDay;
